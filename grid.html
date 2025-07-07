@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Grid Layout Example</title>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 25px;
+                padding: 20px;
+            }
+            .grid-item {
+                background: #074da8;
+                color: white;
+                padding: 20px;
+                font-size: 2em;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            /* Medium screen: switch to two coloum*/
+            @media (max-width: 20px) {
+                .grid-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            /* Small screen: switch to one column */
+            @media (max-width: 10px) {
+                .grid-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"> Left sidebar</div>
+        <div class="grid-item"> Main content</div>
+        <div class="grid-item"> Right sidebar</div>
+        <div class="grid-item"> Next</div>
+        <div class="grid-item"> Previous</div>
+        <div class="grid-item"> Submit</div>
+</body>
